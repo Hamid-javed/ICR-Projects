@@ -1,0 +1,122 @@
+[
+  {
+    "id": "classic-santa",
+    "name": "Classic Santa",
+    "description": "Traditional Santa video with workshop background",
+    "thumbnail": "/assets/templates/classic-santa-thumb.jpg",
+    "duration": 120,
+    "price": 19.99,
+    "clips": [
+      {
+        "id": "intro",
+        "file": "classic-santa-intro.mp4",
+        "duration": 15,
+        "description": "Santa's workshop introduction"
+      },
+      {
+        "id": "name-mention",
+        "file": "classic-santa-name.mp4",
+        "duration": 10,
+        "description": "Personal name mention segment"
+      },
+      {
+        "id": "photo-segment",
+        "file": "classic-santa-photos.mp4",
+        "duration": 20,
+        "description": "Green screen segment for photos"
+      },
+      {
+        "id": "custom-message",
+        "file": "classic-santa-message.mp4",
+        "duration": 60,
+        "description": "Custom script delivery"
+      },
+      {
+        "id": "goodbye",
+        "file": "classic-santa-goodbye.mp4",
+        "duration": 15,
+        "description": "Farewell message"
+      }
+    ]
+  },
+  {
+    "id": "north-pole-adventure",
+    "name": "North Pole Adventure",
+    "description": "Santa takes you on a tour of the North Pole",
+    "thumbnail": "/assets/templates/north-pole-thumb.jpg",
+    "duration": 150,
+    "price": 24.99,
+    "clips": [
+      {
+        "id": "intro",
+        "file": "north-pole-intro.mp4",
+        "duration": 20,
+        "description": "North Pole entrance"
+      },
+      {
+        "id": "name-mention",
+        "file": "north-pole-name.mp4",
+        "duration": 10,
+        "description": "Personal greeting"
+      },
+      {
+        "id": "photo-segment",
+        "file": "north-pole-photos.mp4",
+        "duration": 25,
+        "description": "Photo showcase in North Pole"
+      },
+      {
+        "id": "custom-message",
+        "file": "north-pole-message.mp4",
+        "duration": 80,
+        "description": "Adventure story with custom message"
+      },
+      {
+        "id": "goodbye",
+        "file": "north-pole-goodbye.mp4",
+        "duration": 15,
+        "description": "Adventure conclusion"
+      }
+    ]
+  },
+  {
+    "id": "magical-christmas",
+    "name": "Magical Christmas",
+    "description": "Enchanted Christmas experience with special effects",
+    "thumbnail": "/assets/templates/magical-thumb.jpg",
+    "duration": 180,
+    "price": 29.99,
+    "clips": [
+      {
+        "id": "intro",
+        "file": "magical-intro.mp4",
+        "duration": 25,
+        "description": "Magical Christmas opening"
+      },
+      {
+        "id": "name-mention",
+        "file": "magical-name.mp4",
+        "duration": 12,
+        "description": "Enchanted name reveal"
+      },
+      {
+        "id": "photo-segment",
+        "file": "magical-photos.mp4",
+        "duration": 30,
+        "description": "Magical photo transformation"
+      },
+      {
+        "id": "custom-message",
+        "file": "magical-message.mp4",
+        "duration": 90,
+        "description": "Magical story with effects"
+      },
+      {
+        "id": "goodbye",
+        "file": "magical-goodbye.mp4",
+        "duration": 23,
+        "description": "Magical farewell"
+      }
+    ]
+  }
+]

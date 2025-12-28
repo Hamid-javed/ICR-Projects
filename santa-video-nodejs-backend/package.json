@@ -1,0 +1,33 @@
+{
+  "name": "santa-video-nodejs-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "aws-sdk": "latest",
+    "axios": "latest",
+    "cloudinary": "^2.7.0",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "fluent-ffmpeg": "latest",
+    "joi": "latest",
+    "mongoose": "latest",
+    "multer": "latest",
+    "netopia-card": "^2.1.2",
+    "nodemailer": "latest",
+    "sharp": "latest",
+    "uuid": "latest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "nodemon": "latest",
+    "supertest": "^7.1.3"
+  }
+}

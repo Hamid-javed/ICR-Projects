@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "1234567-89ab-cdef-0123-456789abcdef",
+		"name": "Quiz Application API",
+		"description": "API collection for Quiz Application with QR code scanning and leaderboard features",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Check Device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"deviceId\": \"device123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/check-device",
+							"host": ["{{base_url}}"],
+							"path": ["api", "auth", "check-device"]
+						}
+					}
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"deviceId\": \"device123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/register",
+							"host": ["{{base_url}}"],
+							"path": ["api", "auth", "register"]
+						}
+					}
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/auth/me",
+							"host": ["{{base_url}}"],
+							"path": ["api", "auth", "me"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Get Question by QR Code",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/questions/qr/QR001",
+							"host": ["{{base_url}}"],
+							"path": ["api", "questions", "qr", "QR001"]
+						}
+					}
+				},
+				{
+					"name": "Answer Question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"optionId\": \"option_id_here\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/questions/:id/answer",
+							"host": ["{{base_url}}"],
+							"path": ["api", "questions", ":id", "answer"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "question_id_here"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Import Questions (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/path/to/questions.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/questions/import",
+							"host": ["{{base_url}}"],
+							"path": ["api", "questions", "import"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Leaderboard",
+			"item": [
+				{
+					"name": "Daily Leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/leaderboard/daily",
+							"host": ["{{base_url}}"],
+							"path": ["api", "leaderboard", "daily"]
+						}
+					}
+				},
+				{
+					"name": "Weekly Leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/leaderboard/weekly",
+							"host": ["{{base_url}}"],
+							"path": ["api", "leaderboard", "weekly"]
+						}
+					}
+				},
+				{
+					"name": "Monthly Leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/leaderboard/monthly",
+							"host": ["{{base_url}}"],
+							"path": ["api", "leaderboard", "monthly"]
+						}
+					}
+				},
+				{
+					"name": "All-Time Leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/leaderboard/all-time",
+							"host": ["{{base_url}}"],
+							"path": ["api", "leaderboard", "all-time"]
+						}
+					}
+				},
+				{
+					"name": "Custom Date Range Leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/leaderboard/custom?startDate=2024-01-01&endDate=2024-12-31",
+							"host": ["{{base_url}}"],
+							"path": ["api", "leaderboard", "custom"],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-31"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/users",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "users"]
+						}
+					}
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/users/:id",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "users", ":id"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "user_id_here"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Name\",\n    \"email\": \"updated@example.com\",\n    \"role\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/admin/users/:id",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "users", ":id"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "user_id_here"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/users/:id",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "users", ":id"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "user_id_here"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Get All Questions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/questions",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "questions"]
+						}
+					}
+				},
+				{
+					"name": "Update Question",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"questionText\": \"Updated question text\",\n    \"options\": [\n        {\n            \"text\": \"Option 1\",\n            \"isCorrect\": true\n        },\n        {\n            \"text\": \"Option 2\",\n            \"isCorrect\": false\n        }\n    ],\n    \"category\": \"General Knowledge\",\n    \"difficulty\": \"medium\",\n    \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/admin/questions/:id",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "questions", ":id"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "question_id_here"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Delete Question",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/questions/:id",
+							"host": ["{{base_url}}"],
+							"path": ["api", "admin", "questions", ":id"],
+							"variable": [
+								{
+									"key": "id",
+									"value": "question_id_here"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+} 

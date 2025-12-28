@@ -1,0 +1,92 @@
+[
+  {
+    "id": "praise-1",
+    "category": "Praise",
+    "text": "Ho ho ho! {{childName}}, you've been absolutely wonderful this year! I've been watching, and I'm so proud of how kind and helpful you've been.",
+    "duration": 8
+  },
+  {
+    "id": "praise-2",
+    "category": "Praise",
+    "text": "{{childName}}, my dear child, you have such a good heart! The elves and I have been talking about all the amazing things you've done.",
+    "duration": 9
+  },
+  {
+    "id": "achievement-1",
+    "category": "Achievement",
+    "text": "I heard about how hard you worked in school this year, {{childName}}! Your teachers told me you've been trying your best, and that makes me very happy.",
+    "duration": 10
+  },
+  {
+    "id": "achievement-2",
+    "category": "Achievement",
+    "text": "{{childName}}, I'm so impressed with how you've grown this year! You've learned so many new things and become such a responsible young person.",
+    "duration": 11
+  },
+  {
+    "id": "kindness-1",
+    "category": "Kindness",
+    "text": "The way you help your family and friends, {{childName}}, warms my heart! Kindness is the most magical gift of all.",
+    "duration": 8
+  },
+  {
+    "id": "kindness-2",
+    "category": "Kindness",
+    "text": "{{childName}}, I love seeing how you care for others! Your acts of kindness make the whole world a brighter place.",
+    "duration": 9
+  },
+  {
+    "id": "gifts-1",
+    "category": "Gifts",
+    "text": "This Christmas, {{childName}}, I have some very special surprises for you! The elves have been working extra hard on your presents.",
+    "duration": 10
+  },
+  {
+    "id": "gifts-2",
+    "category": "Gifts",
+    "text": "I hope you'll love what I'm bringing you this Christmas, {{childName}}! Remember, the best gifts are the love we share with each other.",
+    "duration": 11
+  },
+  {
+    "id": "family-1",
+    "category": "Family",
+    "text": "{{childName}}, your family loves you so much, and so do I! Christmas is about spending time with the people who care about you.",
+    "duration": 10
+  },
+  {
+    "id": "family-2",
+    "category": "Family",
+    "text": "I can see how much joy you bring to your family, {{childName}}! Keep being the wonderful person you are.",
+    "duration": 9
+  },
+  {
+    "id": "inspiration-1",
+    "category": "Inspiration",
+    "text": "{{childName}}, never stop believing in yourself! You have the power to make your dreams come true and spread happiness wherever you go.",
+    "duration": 12
+  },
+  {
+    "id": "inspiration-2",
+    "category": "Inspiration",
+    "text": "Remember, {{childName}}, you are capable of amazing things! Keep being curious, keep learning, and always be kind to others.",
+    "duration": 11
+  },
+  {
+    "id": "goodbye-1",
+    "category": "Goodbye",
+    "text": "Well {{childName}}, it's time for me to go! I have many more children to visit tonight. Have a magical Christmas, and remember, I'm always watching over you!",
+    "duration": 13
+  },
+  {
+    "id": "goodbye-2",
+    "category": "Goodbye",
+    "text": "Ho ho ho! Goodbye for now, {{childName}}! Keep being the wonderful child you are, and I'll see you again next Christmas!",
+    "duration": 10
+  },
+  {
+    "id": "goodbye-3",
+    "category": "Goodbye",
+    "text": "{{childName}}, my dear friend, this has been so special! Merry Christmas, and may all your dreams come true!",
+    "duration": 9
+  }
+]

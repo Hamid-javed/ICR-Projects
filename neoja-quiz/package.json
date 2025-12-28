@@ -1,0 +1,35 @@
+{
+  "name": "neoja-quiz-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^4.6.2",
+    "@types/js-cookie": "^3.0.6",
+    "@types/react-datepicker": "^6.2.0",
+    "@yudiel/react-qr-scanner": "^2.3.1",
+    "html5-qrcode": "^2.3.8",
+    "js-cookie": "^3.0.5",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
